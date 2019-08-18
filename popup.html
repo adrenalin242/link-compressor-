@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>link shortner</title>
+	<script src="angular/angular.min.js"></script>
+	<script src="popup.js"></script>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<style type="text/css">
+		html
+		{
+			height: 80px;
+			width: 550px;
+		}
+		body
+		{
+			margin:0;
+			background-color: black;
+
+		}
+		.container
+		{
+			margin-top: -3%;
+		}
+		.form-control-borderless {
+    	border: none;
+		}
+
+		.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    	border: none;
+    	outline: none;
+    	box-shadow: none;
+		}
+		.btn
+		{
+			border-radius: 25px;
+			margin-top: -15px;
+			transform: translate(16px,0px);
+		}
+		.col
+		{
+			margin-top: -15px;
+		}
+		.card-sm
+		{
+			height: 60px;
+			border-radius: 50px;
+		}
+		.fa-search
+		{
+			margin-top: -15px;
+		}
+	</style>
+</head>
+<body ng-app="linkshort" ng-controller="mainCtrl">
+	<div class="container">
+    <br>
+	<div class="row justify-content-center">
+                        <div class="col-12 col-md-10 col-lg-8">
+                            <form class="card card-sm">
+                                <div class="card-body row no-gutters align-items-center">
+                                    <div class="col">
+                                        <input id="real" class="form-control form-control-lg form-control-borderless" placeholder="Enter the link here" ng-model="input">
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn btn-lg btn-success" ng-click="short();">Compress</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+</div>
+</body>
+</html>
